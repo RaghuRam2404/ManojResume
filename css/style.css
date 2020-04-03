@@ -1,0 +1,114 @@
+@font-face {
+  font-family: sfpro;
+  src: url(../fonts/FontsFree-Net-SFProText-Regular.ttf);
+}
+@font-face {
+  font-family: sfprobold;
+  src: url(../fonts/SFProText-Bold.ttf);
+}
+@font-face {
+  font-family: sfprosemibold;
+  src: url(../fonts/SFProText-SemiBold.ttf);
+}
+
+@font-face{
+	font-family: bebas;
+	src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+body{
+	background-color: #14141A;
+	font-family: "sfpro";
+	color: white;
+}
+
+.container{
+	width: 1440px;
+}
+
+.topbar{
+	display: block;
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+  	padding-top: 50px;
+  	height: 150px;
+}
+
+.logo{
+	width: 70px;
+	height: 12px;
+}
+
+.menuitem{
+	font-family: "sfprosemibold";
+	color: #686868;
+}
+
+.active{
+	color: #FFFFFF;
+}
+
+.activechar{
+	border-bottom: 1px solid #FF0053;
+}
+
+
+.content{
+	height: 100vh;
+}
+
+.intro{
+	background-image: url("../images/face.png");
+	background-position: center bottom	;
+	background-repeat: no-repeat;;
+}
+
+.introrow{
+	top: 50%;
+	position: fixed;
+}
+
+.namesection{
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.name{
+	font-family: "bebas";
+	font-size: 80px;
+	color: #FF0053;
+	line-height: 100px;
+}
+
+.designation{
+	font-family: "sfpro";
+	font-size: 30px;
+	color: #FF0053;
+	line-height: 36px;
+}
+
+@media only screen and (max-width: 760px) {
+  body {
+    /*background-color: lightblue;*/
+  }
+  .hideitem{
+  	display: none;
+  }
+	.intro{
+		background-size: 80%;
+	}
+	.introrow{
+		top: 20%;
+	}
+}
+
+
+@media only screen and (max-width: 660px) {
+  .intro{
+  	background-size: 70%;
+  }
+}
