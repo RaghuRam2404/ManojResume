@@ -3,7 +3,7 @@
 	.topbar{
 	  	padding-top: 15px;
 	}
-		
+
   .container{
 	width: 100%;
    }
@@ -24,10 +24,6 @@
 	}
 
 	.name{
-		font-size: 70px;
-	}
-
-	.designation{
-		font-size: 25px;
+		font-size: 65px;
 	}
 }
