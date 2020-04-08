@@ -83,10 +83,7 @@ body{
 	font-size: 80px;
 	color: #FF0053;
 	line-height: 100px;
-}
-
-.name:hover{
-	transform: translateX(0px) translateY(0px) translateZ(0px) scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skewX(0deg) skewY(0deg);
+	overflow: hidden;
 }
 
 .designation{
@@ -94,4 +91,14 @@ body{
 	font-size: 30px;
 	color: #FF0053;
 	line-height: 36px;
+	overflow: hidden;
+}
+
+.hold{
+	transform: translateY(100px)
+}
+
+.moveupanim{
+	transform: translateY(0px);
+	transition: opacity 0.5s ease-out, transform 0.5s;
 }
