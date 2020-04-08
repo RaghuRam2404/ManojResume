@@ -1,0 +1,18 @@
+
+@media screen and (min-width: 661px) and (max-width: 760px) {
+  body {
+    /*background-color: lightblue;*/
+  }
+  .container{
+	width: 100%;
+   }
+  .hideitem{
+  	display: none;
+  }
+	.intro{
+		background-size: 80%;
+	}
+	.introrow{
+		top: 20%;
+	}
+}

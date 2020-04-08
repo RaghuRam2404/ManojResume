@@ -1,0 +1,33 @@
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+
+	.topbar{
+	  	padding-top: 15px;
+	}
+		
+  .container{
+	width: 100%;
+   }
+  .hideitem{
+  	display: none;
+  }
+
+	.intro{
+		background-size: 100%;
+	}
+
+	.introrow{
+		top: 30%;
+		position: absolute;
+    	left: 50%;
+	    transform: translate(-50%, -50%);
+
+	}
+
+	.name{
+		font-size: 70px;
+	}
+
+	.designation{
+		font-size: 25px;
+	}
+}

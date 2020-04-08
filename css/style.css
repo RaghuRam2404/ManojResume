@@ -64,11 +64,12 @@ body{
 .intro{
 	background-image: url("../images/face.png");
 	background-position: center bottom	;
-	background-repeat: no-repeat;;
+	background-repeat: no-repeat;
+	background-size: 60%;
 }
 
 .introrow{
-	top: 50%;
+	top: 45%;
 	position: fixed;
 }
 
@@ -89,26 +90,4 @@ body{
 	font-size: 30px;
 	color: #FF0053;
 	line-height: 36px;
-}
-
-@media only screen and (max-width: 760px) {
-  body {
-    /*background-color: lightblue;*/
-  }
-  .hideitem{
-  	display: none;
-  }
-	.intro{
-		background-size: 80%;
-	}
-	.introrow{
-		top: 20%;
-	}
-}
-
-
-@media only screen and (max-width: 660px) {
-  .intro{
-  	background-size: 70%;
-  }
 }
