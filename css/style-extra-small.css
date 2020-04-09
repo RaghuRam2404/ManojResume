@@ -38,4 +38,9 @@
 	.scrollmore{
 		left: 70%;
 	}
+
+	.scrollmore svg{
+		width: 60px;
+		height: 23.25px;
+	}
 }
