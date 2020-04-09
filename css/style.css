@@ -17,9 +17,18 @@
 }
 
 body{
-	background-color: #14141A;
+	background-color: white;
 	font-family: "sfpro";
-	color: white;
+	color: black;
+	-webkit-transition: all 0.15s ease; -moz-transition: all 0.15s ease; transition: all 0.15s ease;
+	background-size: 200% 100%; 
+	background-position: 100% 0; 
+	background-image: linear-gradient(to left, transparent 50%, rgba(20,20,26,1) 50%);
+}
+
+.bgcolor{
+	/*background-color: #14141A;*/
+  background-position: 0 0;
 }
 
 .container{
@@ -43,6 +52,10 @@ body{
 	height: 12px;
 }
 
+.menu{
+	overflow: hidden;
+}
+
 .menuitem{
 	font-family: "sfprosemibold";
 	color: #686868;
@@ -62,10 +75,16 @@ body{
 }
 
 .intro{
-	background-image: url("../images/face.png");
-	background-position: center bottom	;
+	background-position: center bottom;
+	transition: opacity 0.1s ease-out, transform 0.1s;
 	background-repeat: no-repeat;
 	background-size: 60%;
+	opacity: 0;
+	background-image: url("../images/face.png");
+}
+
+.introbg{
+	opacity: 1;
 }
 
 .introrow{
