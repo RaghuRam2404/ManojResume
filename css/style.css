@@ -121,3 +121,15 @@ body{
 	transform: translateY(0px);
 	transition: opacity 0.5s ease-out, transform 0.5s;
 }
+
+.scrollmore{
+	display: block;
+	position: absolute;
+	bottom: 0%;
+	left: 80%;
+}
+
+.scrollmore img{
+	width: 85px;
+	height: 37px;
+}

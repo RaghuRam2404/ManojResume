@@ -34,4 +34,8 @@
 	.designation{
 		font-size: 21px;
 	}
+
+	.scrollmore{
+		left: 75%;
+	}
 }
