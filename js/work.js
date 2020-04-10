@@ -96,7 +96,7 @@ function callInititalLoad(){
 		setTimeout(function(){
 			$(".intro").addClass('introbg')
 			$(".hold").addClass('moveupanim')
-		},200);
+		},500);
 
 		setTimeout(function(){$(".topbar").css('background-color', '#14141A');}, 1000);
 	}, 500);
