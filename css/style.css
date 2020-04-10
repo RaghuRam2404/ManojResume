@@ -20,9 +20,14 @@ body{
 	background-color: white;
 	font-family: "sfpro";
 	color: black;
-	-webkit-transition: all 0.15s ease; -moz-transition: all 0.15s ease; transition: all 0.15s ease;
+	-webkit-transition: all 0.15s ease; -moz-transition: all 1s ease; transition: all 1s ease;
 	background-size: 200% 100%; 
 	background-position: 100% 0; 
+	background-color: #14141A;
+}
+
+.gradcolor{
+	background-color: transparent;
 	background-image: linear-gradient(to left, transparent 50%, rgba(20,20,26,1) 50%);
 }
 
@@ -48,10 +53,12 @@ body{
 	margin-right: auto;
   	padding: 50px 0px 15px 0px;
 
-	-webkit-transition: all 0.15s ease; -moz-transition: all 0.15s ease; transition: all 0.15s ease;
+	-webkit-transition: all 1s ease; 
+	-moz-transition: all 1s ease; 
+	transition: all 1s ease;
 	background-size: 200% 100%; 
 	background-position: 100% 0; 
-	background-image: linear-gradient(to left, transparent 50%, rgba(20,20,26,1) 50%);
+	background-color: transparent;
 }
 
 .logo{
@@ -66,6 +73,11 @@ body{
 .menuitem{
 	font-family: "sfprosemibold";
 	color: #686868;
+}
+
+.menuitem:hover{
+	cursor: pointer;
+	color: #FFFFFF;
 }
 
 .active{
@@ -84,7 +96,7 @@ body{
 
 .intro{
 	background-position: center bottom;
-	transition: opacity 0.1s ease-out, transform 0.1s;
+	transition: opacity 0.2s ease-out, transform 0.2s;
 	background-repeat: no-repeat;
 	background-size: 60%;
 	opacity: 0;
@@ -267,4 +279,44 @@ body{
 .more{
 	font-size: 50px;
 	letter-spacing: 4px;
+}
+
+.footerlarge{
+	padding: 20px 0px;
+	border-top: 1px solid rgba(204, 204, 204, 0.2);
+}
+.footersmall{
+	;
+}
+
+.namefooter{
+	display: block;
+	position: relative;
+	float: left;
+	letter-spacing: 1.44px;
+	font-family: "sfpro";
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+.iconfooter{
+	display: block;
+	position: relative;
+	float: right;
+}
+
+.footericon{
+	height: 24px;
+	width: 24px;
+}
+
+.footersmall{
+	display: none;
+}
+
+.namefootersmall{
+	letter-spacing: 1.44px;
+	font-family: "sfpro";
+	color: #FFFFFF;
+	font-size: 14px;
 }

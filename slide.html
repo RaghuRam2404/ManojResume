@@ -7,8 +7,10 @@
   	<script src="./js/popper.min.js"></script>
   	<script src="./js/bootstrap.min.js"></script>
 	<!-- dependency end-->
+  	<script src="./js/loader.js"></script>
   	<script src="./js/work.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="./css/loader.css" />
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	<link rel="stylesheet" type="text/css" href="./css/style-large.css" />
 	<link rel="stylesheet" type="text/css" href="./css/style-medium.css" />
@@ -17,8 +19,43 @@
 
 <style type="text/css"></style>
 </head>
-<body>
-	
+<body id='body' onload="loadDone()">
+		
+	<div id="loading_holder" class="loading_holder">
+		<img src="images/loader.png" />
+		<br />
+		<div class="loading-line">
+		  <span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span><!--
+		  --><span class="loading-bit"></span>
+			
+		</div>
+	</div>
+
+<script>
+	if(location.hostname !== ""){
+		var images = ["Asset 1.png","Asset 2.png","Asset 3.png","Bitmap.png","Bitmap 1.png","Bitmap 2.png","Bitmap 3.png","Bitmap 4.png","Bitmap 5.png","Bitmap 6.png","Bitmap 7.png","Bitmap 8.png","Bitmap 9.png","Bitmap 10.png",]
+		for(var i=0; i<images.length; i++){
+			var img1 = document.createElement("img");
+			img1.src=window.location.protocol+"//"+location.hostname+'/images/'+images[i];
+		}
+	}
+</script>
+
+	<div id='fullsingle' style='display:none;'>
 	<div class='topbar'>
 	<div class='container'>	
 		<div class="row">
@@ -45,14 +82,14 @@
 		  <div class="col-sm-9"></div>
 		  <div class="col-sm-1">
 		  	<div class='menu menuhome'>
-		  		<div class='menuitem hideitem hold active'>
+		  		<div class='menuitem hideitem hold active' onclick='goToPage(1)'>
 		  			<span class='activechar'>H</span>ome
 		  		</div>
 		  	</div>
 		  </div>
 		  <div class="col-sm-1">
 		  	<div class='menu menuabout'>
-		  		<div class='menuitem hold hideitem'>About</div>
+		  		<div class='menuitem hold hideitem' onclick='goToPage(2)'>About</div>
 		  	</div>
 		  </div>
 		</div>
@@ -244,6 +281,25 @@
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class='container footerlarge'>
+		<div class="namefooter">&copy; MANOJ SHAKAR | All Rights Reserved 2020.</div>
+		<div class="iconfooter">
+			<img src='./images/Asset 1.png' class='footericon'/>
+			<img src='./images/Asset 2.png' class='footericon'/>
+			<img src='./images/Asset 4.png' class='footericon'/>
+		</div>
+	</div>
+	<div class='container footersmall'>
+		<div class="iconfootersmall">
+			<img src='./images/Asset 1.png' class='footericon'/>
+			<img src='./images/Asset 2.png' class='footericon'/>
+			<img src='./images/Asset 4.png' class='footericon'/>
+		</div><br />
+		<div class="namefootersmall">&copy; MANOJ SHAKAR | All Rights Reserved 2020.</div>
+	</div>
+	
 	</div>
 
 </body>

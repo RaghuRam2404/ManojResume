@@ -5,6 +5,42 @@ var oldy=window.scrollY
 var introheight=100
 var movement = false;
 
+function getCssValuePrefix()
+{
+    var rtrnVal = '';//default to standard syntax
+    var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
+
+    // Create a temporary DOM object for testing
+    var dom = document.createElement('div');
+
+    for (var i = 0; i < prefixes.length; i++)
+    {
+        // Attempt to set the style
+        dom.style.background = prefixes[i] + 'linear-gradient(#000000, #ffffff)';
+
+        // Detect if the style was successfully set
+        if (dom.style.background)
+        {
+            rtrnVal = prefixes[i];
+        }
+    }
+
+    dom = null;
+    delete dom;
+
+    return rtrnVal;
+}
+
+function goToPage(num){
+
+	movement = true;
+	$('html, body').animate({
+		scrollTop: num == 2? (introheight+1) : 0
+	}, 500, function(){
+		movement = false;
+	});
+}
+
 function handleScroll(scroll_pos) {
 	var currenty = window.scrollY
 	var scrolldown = oldy > currenty;
@@ -16,29 +52,19 @@ function handleScroll(scroll_pos) {
 
 	if(currenty >= 0 && currenty <= introheight*0.75){
 		// selected menu - home
-		$(".menuhome").html("<div class='menuitem hideitem active'><span class='activechar'>H</span>ome</div>");
-		$(".menuabout").html("<div class='menuitem hideitem'>About</div>");
+		$(".menuhome").html("<div class='menuitem hideitem active' onclick='goToPage(1)'><span class='activechar'>H</span>ome</div>");
+		$(".menuabout").html("<div class='menuitem hideitem' onclick='goToPage(2)'>About</div>");
 	}else{
-		$(".menuhome").html("<div class='menuitem hideitem '>Home</div>");
-		$(".menuabout").html("<div class='menuitem hideitem active'><span class='activechar'>A</span>bout</div>");
+		$(".menuhome").html("<div class='menuitem hideitem ' onclick='goToPage(1)'>Home</div>");
+		$(".menuabout").html("<div class='menuitem hideitem active' onclick='goToPage(2)'><span class='activechar'>A</span>bout</div>");
 	}
 
 	if(samescroll) return;
 
 	if(!movement && currenty >= 0 && currenty <= introheight && (scrollup || samescroll)){
-		movement = true;
-		$('html, body').animate({
-			scrollTop: introheight+1
-		}, 500, function(){
-			movement = false;
-		});
+		goToPage(2)
 	}else if(!movement && currenty >= introheight && currenty <= introheight+100 && (scrolldown || samescroll)){
-		movement = true;
-		$('html, body').animate({
-			scrollTop: 0
-		}, 500, function(){
-			movement = false;
-		});
+		goToPage(1)
 	}
 
 }
@@ -58,7 +84,7 @@ function addScrollListener(){
 
 }
 
-$( document ).ready(function(){
+function callInititalLoad(){
 	introheight = document.getElementsByClassName("intro")[0].offsetHeight;
 	addScrollListener();
 	setTimeout(function(){
@@ -71,5 +97,18 @@ $( document ).ready(function(){
 			$(".intro").addClass('introbg')
 			$(".hold").addClass('moveupanim')
 		},200);
+
+		setTimeout(function(){$(".topbar").css('background-color', '#14141A');}, 1000);
 	}, 500);
-});
+}
+
+function loadDone(){
+	setTimeout(function(){
+		document.getElementById("loading_holder").style.display = "none";
+		$("body").addClass('gradcolor');
+		$(".topbar").addClass('gradcolor');
+		document.getElementById("fullsingle").style.display = "block";
+		callInititalLoad();
+	}, 1000);
+	
+}
