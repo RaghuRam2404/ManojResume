@@ -88,15 +88,19 @@ function callInititalLoad(){
 	introheight = document.getElementsByClassName("intro")[0].offsetHeight;
 	addScrollListener();
 	setTimeout(function(){
-		
-		$("body").addClass('bgcolor')
-		$(".topbar").addClass('bgcolor')
-		$(".topbar").addClass('bgcolor1')
-
+		$(".gridline").addClass('gridlineanim')
 		setTimeout(function(){
-			$(".intro").addClass('introbg')
-			$(".hold").addClass('moveupanim')
-		},500);
+			$("body").addClass('bgcolor')
+			$(".topbar").addClass('bgcolor')
+			$(".topbar").addClass('bgcolor1')
+
+			setTimeout(function(){
+				$(".intro").addClass('introbg')
+				$(".hold").addClass('moveupanim')
+			},500);
+
+		}, 500);
+
 
 		setTimeout(function(){$(".topbar").css('background-color', '#14141A');}, 1000);
 	}, 500);
@@ -109,6 +113,8 @@ function loadDone(){
 		$(".topbar").addClass('gradcolor');
 		document.getElementById("fullsingle").style.display = "block";
 		$(".content").css("height",window.innerHeight + 'px')
+		$(".grid").css("bottom",window.innerHeight + 'px')
+		
 		callInititalLoad();
 	}, 500);
 	
