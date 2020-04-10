@@ -329,8 +329,9 @@ body{
 }
 
 .footerlarge{
-	margin-top: 100px;
-	border-top: 1px solid rgba(204, 204, 204, 0.2);
+	margin: 100px 0px 50px 0px;
+    border-top: 1px solid rgba(204, 204, 204, 0.2);
+    padding: 10px 50px;
 }
 .footersmall{
 	margin: 50px 0px;
@@ -342,7 +343,7 @@ body{
 	float: left;
 	letter-spacing: 1.44px;
 	font-family: "sfpro";
-	font-size: 18px;
+	font-size: 14px;
 	color: #FFFFFF;
 }
 
