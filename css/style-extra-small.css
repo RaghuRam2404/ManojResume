@@ -5,7 +5,9 @@
 	}
 
 	.grid{
-		display: none;
+		/*display: none;*/
+		margin-right: 0px;
+		margin-left: 0px;
 	}
 
   .container{
@@ -44,8 +46,8 @@
 	}
 
 	.imageclass{
-		width: 333.33px;
-		height: 250px;
+		width: 293.33px;
+		height: 220px;
 	}
 
 	.hideimg{
