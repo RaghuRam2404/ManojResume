@@ -108,6 +108,7 @@ function loadDone(){
 		$("body").addClass('gradcolor');
 		$(".topbar").addClass('gradcolor');
 		document.getElementById("fullsingle").style.display = "block";
+		$(".content").css("height",window.innerHeight + 'px')
 		callInititalLoad();
 	}, 500);
 	
