@@ -1,7 +1,7 @@
 @media only screen and (max-width: 600px) and (min-width: 0px){
 
 	.topbar{
-	  	padding-top: 15px;
+	  	padding: 15px 0px;
 	}
 		
   .container{
@@ -37,5 +37,14 @@
 
 	.scrollmore{
 		left: 70%;
+	}
+
+	.imageclass{
+		width: 333.33px;
+		height: 250px;
+	}
+
+	.hideimg{
+		display: none;
 	}
 }

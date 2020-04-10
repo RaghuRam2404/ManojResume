@@ -30,6 +30,9 @@ body{
 	/*background-color: #14141A;*/
   background-position: 0 0;
 }
+.bgcolor1{
+	background-color: #14141A;
+}
 
 .container{
 	width: 1440px;
@@ -37,14 +40,18 @@ body{
 
 .topbar{
 	display: block;
-	position: absolute;
+	position: fixed;
 	z-index: 100;
 	left: 0;
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
-  	padding-top: 50px;
-  	height: 150px;
+  	padding: 50px 0px 15px 0px;
+
+	-webkit-transition: all 0.15s ease; -moz-transition: all 0.15s ease; transition: all 0.15s ease;
+	background-size: 200% 100%; 
+	background-position: 100% 0; 
+	background-image: linear-gradient(to left, transparent 50%, rgba(20,20,26,1) 50%);
 }
 
 .logo{
@@ -72,6 +79,7 @@ body{
 
 .content{
 	height: 100vh;
+	overflow: hidden;
 }
 
 .intro{
@@ -88,8 +96,9 @@ body{
 }
 
 .introrow{
+	display: block;
+	position: absolute;
 	top: 45%;
-	position: fixed;
 }
 
 .namesection{
@@ -132,4 +141,130 @@ body{
 .scrollmore svg{
 	width: 80px;
 	height: 31px;
+}
+
+.heading{
+	font-family: "bebas";
+	font-size: 25px;
+	letter-spacing: 2px;
+	color: #FF0053;
+}
+
+.section-content{
+	font-family: "sfpro";
+	font-size: 16px;
+	color: #C1C1C1;
+	line-height: 32px;
+	width: 70%;
+}
+
+.section-content b{
+	font-family: "sfprobold"
+}
+
+.contentsection{
+	margin: 40px auto 40px auto;
+}
+
+.companysection{
+	margin-top: 40px;
+}
+
+
+.companyrow{
+	display: block;
+	width: 100%;
+}
+
+.companyicon, .companyname, .companyyears{
+	display: block;
+	position: relative;
+	float: left;
+}
+
+.companyicon{
+	height: 40px;
+	width: 40px;
+}
+
+.companydet{
+	padding-top: 5px;
+}
+
+.companyname{
+	font-family: "sfpro";
+	font-size: 20px;
+	color: #FFFFFF;
+	padding-left: 10px;
+}
+
+.companyyears{
+	font-family: "sfpro";
+	font-size: 16px;
+	color: #C1C1C1;
+	padding: 4px 0px 0px 10px;
+}
+
+.companydesignation{
+	font-family: "sfprosemibold";
+	font-size: 18px;
+	color: #C1C1C1;
+	margin-top: 20px;
+}
+
+.companydetails{
+	font-family: "sfpro";
+	font-size: 16px;
+	line-height: 30px;
+	color: #C1C1C1;
+	margin-top: 20px;
+	width: 70%;
+}
+
+.cvholder{
+	margin: 70px 0px;
+}
+
+.downloadcv{
+	width: 238px;
+	height: 81px;
+	padding: 25px;
+}
+
+.downloadcv:hover{
+	text-decoration: none;
+	cursor: pointer;
+	color: #FFFFFF;
+}
+
+.imagerow{
+	margin-top: 20px;
+}
+
+.imageclass{
+	width: 333px;
+	height: 250px;
+	margin-bottom: 15px;
+}
+
+.fillpink{
+	background-color: #FF0053;
+	border-radius: 8px;
+	border: 0px solid black;
+	font-family: "bebas";
+	letter-spacing: 2px;	
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+.alignc{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.more{
+	font-size: 50px;
+	letter-spacing: 4px;
 }
