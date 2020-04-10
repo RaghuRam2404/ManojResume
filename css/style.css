@@ -39,6 +39,10 @@ body{
 	background-color: #14141A;
 }
 
+.container-fluid{
+	padding: 0px 50px;
+}
+
 .container{
 	width: 1440px;
 }
@@ -98,7 +102,7 @@ body{
 	background-position: center bottom;
 	transition: opacity 0.2s ease-out, transform 0.2s;
 	background-repeat: no-repeat;
-	background-size: 60%;
+	background-size: 45%;
 	opacity: 0;
 	background-image: url("../images/face.png");
 }
@@ -282,11 +286,11 @@ body{
 }
 
 .footerlarge{
-	padding: 20px 0px;
+	margin-top: 100px;
 	border-top: 1px solid rgba(204, 204, 204, 0.2);
 }
 .footersmall{
-	;
+	margin-top: 50px;
 }
 
 .namefooter{
