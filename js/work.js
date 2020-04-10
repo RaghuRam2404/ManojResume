@@ -109,6 +109,6 @@ function loadDone(){
 		$(".topbar").addClass('gradcolor');
 		document.getElementById("fullsingle").style.display = "block";
 		callInititalLoad();
-	}, 1000);
+	}, 500);
 	
 }
