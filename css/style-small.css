@@ -33,6 +33,17 @@
 		font-size: 65px;
 	}
 
+	.companydet{
+		display: block;
+		position: relative;
+		float: left;
+		padding-top: 0px;
+	}
+
+	.companyname, .companyyears{
+		float: unset;
+	}
+
 	.scrollmore{
 		left: 76%;
 	}

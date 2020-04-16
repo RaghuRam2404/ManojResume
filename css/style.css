@@ -300,6 +300,11 @@ body{
 	margin-top: 20px;
 }
 
+.imagerow img:hover{
+	box-shadow: 3px 3px 7px 0px rgba(255,255,255,1);
+	transition-duration: 0.5s;
+}
+
 .imageclass{
 	width: 333px;
 	height: 250px;
@@ -315,6 +320,10 @@ body{
 	color: #FFFFFF;
 	text-decoration: none;
 	font-size: 25px;
+}
+
+a.nohover{
+	text-decoration: none;
 }
 
 .alignc{

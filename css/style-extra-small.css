@@ -37,6 +37,17 @@
 		font-size: 39px;
 	}
 
+	.companydet{
+		display: block;
+		position: relative;
+		float: left;
+		padding-top: 0px;
+	}
+
+	.companyname, .companyyears{
+		float: unset;
+	}
+
 	.designation{
 		font-size: 21px;
 	}
